@@ -11,9 +11,9 @@
 //		+ 2 ki tu dac biet 
 
 int main(){
-	char string[100] = "bbc43&^&^&%hh87";
+	char string[100] = "my email is hfu746fu@gmail.com";
 	int size = strlen(string);
-	int countChar=0, countNum=0 ;
+	int countChar=0, countNum=0, countSpace=0 ;
 	for(int i=0; i<size; i++){
 		if(('a'<=string[i] && string[i]<='z') || ('A'<=string[i] && string[i]<='Z')){
 			countChar++;
@@ -24,10 +24,16 @@ int main(){
 			countNum++;
 		}
 	}
+	for(int i=0; i<size; i++){
+		if(string[i]==' '){
+			countSpace++;
+		}
+	}
+	
 	printf("chuoi da nhap la: %s", string);
 	printf("\nSo ki tu la chu cai la: %d", countChar);
 	printf("\nSo ki tu la chu so la: %d", countNum);
-	printf("\nSo ki tu la ki tu dac biet la: %d",size - countChar - countNum);
+	printf("\nSo ki tu la ki tu dac biet la: %d",size - countChar - countNum - countSpace);
 	
 	return 0;
 } 
